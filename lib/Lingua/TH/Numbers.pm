@@ -1,3 +1,7 @@
+=encoding utf8
+
+=cut
+
 package Lingua::TH::Numbers;
 
 use strict;
@@ -15,11 +19,11 @@ Lingua::TH::Numbers - Convert and spell Thai numbers.
 
 =head1 VERSION
 
-Version 1.0.0
+Version 1.0.1
 
 =cut
 
-our $VERSION = '1.0.0';
+our $VERSION = '1.0.1';
 
 # Digits from 1 to 9.
 our $DIGITS =
@@ -181,6 +185,9 @@ sub thai_numerals
 =head2 arabic_numerals()
 
 Output the number stored in the object using arabic numerals.
+
+	my $lop_sip = Lingua::TH::Numbers->new( '-๑๐' );
+	print $lop_sip->arabic_numerals(), "\n";
 
 =cut
 
