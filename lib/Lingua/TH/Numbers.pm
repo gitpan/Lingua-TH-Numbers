@@ -20,11 +20,11 @@ Lingua::TH::Numbers - Convert and spell Thai numbers.
 
 =head1 VERSION
 
-Version 1.0.3
+Version 1.0.4
 
 =cut
 
-our $VERSION = '1.0.3';
+our $VERSION = '1.0.4';
 
 # Digits from 1 to 9.
 our $DIGITS =
@@ -127,7 +127,7 @@ sub new
 	my ( $class, $input ) = @_;
 	
 	# Required parameters.
-	die 'Input number is missing'
+	croak 'Input number is missing'
 		unless defined( $input );
 	
 	# Find the type of the input.
@@ -241,7 +241,7 @@ sub spell
 	# Check parameters.
 	$output_mode = 'thai'
 		unless defined( $output_mode );
-	die 'Output mode is not valid'
+	croak 'Output mode is not valid'
 		unless defined( $SPELLING_OUTPUT_MODES->{ $output_mode } );
 	$informal = 0
 		unless defined( $informal );
@@ -251,7 +251,7 @@ sub spell
 	# Parse the number.
 	my $number = $self->arabic_numerals();
 	my ( $sign, $integer, $decimals ) = $number =~ /^(-?)(\d+)\.?(\d*)$/;
-	die 'Can only spell numbers up to ( 10**13 - 1 )'
+	croak 'Can only spell numbers up to ( 10**13 - 1 )'
 		if length( $integer ) > 13;
 	
 	# Put all the words in an array, as the word separator varies depending on the
@@ -311,7 +311,7 @@ sub _spell_integer
 	my ( $integer, $output_mode_index, $is_informal ) = @_;
 	my @spelling = ();
 	
-	die 'Integer is too large for the internal function to spell'
+	croak 'Integer is too large for the internal function to spell'
 		if length( $integer ) > 7;
 	
 	my @integer_digits  = reverse split( //, $integer );
@@ -428,7 +428,7 @@ L<http://search.cpan.org/dist/lingua-th-numbers/>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2011 Guillaume Aubert.
+Copyright 2011-2012 Guillaume Aubert.
 
 This program is free software; you can redistribute it and/or modify it
 under the terms of the Artistic License.
