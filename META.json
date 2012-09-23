@@ -1,0 +1,56 @@
+{
+   "abstract" : "Convert and spell Thai numbers.",
+   "author" : [
+      "Guillaume Aubert <aubertg@cpan.org>"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921",
+   "license" : [
+      "artistic_1"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Lingua-TH-Numbers",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Test::Exception" : "0",
+            "Test::More" : "0.94"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Carp" : "0",
+            "Data::Dumper" : "0",
+            "perl" : "5.008"
+         }
+      }
+   },
+   "provides" : {
+      "Lingua::TH::Numbers" : {
+         "file" : "lib/Lingua/TH/Numbers.pm",
+         "version" : "v1.0.5"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "http://rt.cpan.org/NoAuth/ReportBug.html?Queue=lingua-th-numbers"
+      },
+      "homepage" : "https://metacpan.org/release/Lingua-TH-Numbers",
+      "license" : [
+         "http://www.perlfoundation.org/artistic_license_1_0"
+      ],
+      "repository" : {
+         "url" : "https://github.com/guillaumeaubert/Lingua-TH-Numbers"
+      }
+   },
+   "version" : "v1.0.5"
+}
