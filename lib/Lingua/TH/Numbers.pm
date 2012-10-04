@@ -20,11 +20,11 @@ Lingua::TH::Numbers - Convert and spell Thai numbers.
 
 =head1 VERSION
 
-Version 1.0.5
+Version 1.0.6
 
 =cut
 
-our $VERSION = '1.0.5';
+our $VERSION = '1.0.6';
 
 # Digits from 1 to 9.
 our $DIGITS =
@@ -430,10 +430,16 @@ L<http://search.cpan.org/dist/lingua-th-numbers/>
 
 Copyright 2011-2012 Guillaume Aubert.
 
-This program is free software; you can redistribute it and/or modify it
-under the terms of the Artistic License.
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License version 3 as published by the Free
+Software Foundation.
 
-See http://dev.perl.org/licenses/ for more information.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program. If not, see http://www.gnu.org/licenses/
 
 =cut
 
