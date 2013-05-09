@@ -17,6 +17,7 @@
       "build" : {
          "requires" : {
             "Test::Exception" : "0",
+            "Test::FailWarnings" : "0",
             "Test::More" : "0.94"
          }
       },
@@ -36,13 +37,13 @@
    "provides" : {
       "Lingua::TH::Numbers" : {
          "file" : "lib/Lingua/TH/Numbers.pm",
-         "version" : "v1.0.6"
+         "version" : "v1.0.7"
       }
    },
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "http://rt.cpan.org/NoAuth/ReportBug.html?Queue=lingua-th-numbers"
+         "web" : "https://github.com/guillaumeaubert/Lingua-TH-Numbers/issues"
       },
       "homepage" : "https://metacpan.org/release/Lingua-TH-Numbers",
       "license" : [
@@ -52,5 +53,5 @@
          "url" : "https://github.com/guillaumeaubert/Lingua-TH-Numbers"
       }
    },
-   "version" : "v1.0.6"
+   "version" : "v1.0.7"
 }

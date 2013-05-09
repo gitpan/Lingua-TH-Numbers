@@ -1,4 +1,5 @@
 .perlcriticrc
+.travis.yml
 Build.PL
 Changes
 LICENSE
@@ -7,7 +8,8 @@ MANIFEST.SKIP
 META.json
 META.yml
 Makefile.PL
-README
+README.md
+examples/examples.txt
 ignore.txt
 lib/Lingua/TH/Numbers.pm
 t/00-load.t
@@ -15,8 +17,11 @@ t/10-new.t
 t/20-thai_numerals.t
 t/30-arabic_numerals.t
 t/50-spell.t
-t/manifest.t
-t/module_versions.t
-t/perlcritic.t
-t/pod-coverage.t
-t/pod.t
+xt/changes.t
+xt/kwalitee.t
+xt/manifest.t
+xt/module_versions.t
+xt/perlcritic.t
+xt/pod-coverage.t
+xt/pod.t
+xt/unix_eol.t

@@ -1,9 +1,40 @@
 use 5.008;
 use strict;
 use warnings;
+
 use Module::Build;
 
-my $builder = Module::Build->new(
+
+my $class = Module::Build->subclass(
+	code =>
+	q|
+		# Override 'test' to support running extended tests in the xt/
+		# directory.
+		sub ACTION_test
+		{
+			my ( $self ) = @_;
+			
+			$self->recursive_test_files(1);
+			
+			$self->test_files( 't', 'xt' )
+				if $ENV{'RELEASE_TESTING'};
+			
+			return $self->SUPER::ACTION_test();
+		}
+		
+		# Force running extended tests when testing the distribution.
+		sub ACTION_disttest
+		{
+			my ( $self ) = @_;
+			
+			local $ENV{ RELEASE_TESTING } = 1;
+			
+			return $self->SUPER::ACTION_disttest();
+		}
+	|,
+);
+
+my $builder = $class->new(
 	module_name         => 'Lingua::TH::Numbers',
 	license             => 'GPL_3',
 	dist_author         => q{Guillaume Aubert <aubertg@cpan.org>},
@@ -12,6 +43,7 @@ my $builder = Module::Build->new(
 	{
 		'Test::More'            => 0.94, # For subtest().
 		'Test::Exception'       => 0,
+		'Test::FailWarnings'    => 0,
 	},
 	requires            =>
 	{
@@ -34,7 +66,7 @@ my $builder = Module::Build->new(
 		{
 			repository  => 'https://github.com/guillaumeaubert/Lingua-TH-Numbers',
 			homepage    => 'https://metacpan.org/release/Lingua-TH-Numbers',
-			bugtracker  => 'http://rt.cpan.org/NoAuth/ReportBug.html?Queue=lingua-th-numbers',
+			bugtracker  => 'https://github.com/guillaumeaubert/Lingua-TH-Numbers/issues',
 		},
 	},
 );

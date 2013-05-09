@@ -20,11 +20,11 @@ Lingua::TH::Numbers - Convert and spell Thai numbers.
 
 =head1 VERSION
 
-Version 1.0.6
+Version 1.0.7
 
 =cut
 
-our $VERSION = '1.0.6';
+our $VERSION = '1.0.7';
 
 # Digits from 1 to 9.
 our $DIGITS =
@@ -383,9 +383,10 @@ upgrade.
 
 =head1 BUGS
 
-Please report any bugs or feature requests to C<bug-lingua-th-numbers at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=lingua-th-numbers>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
+Please report any bugs or feature requests through the web interface at
+L<https://github.com/guillaumeaubert/Lingua-TH-Numbers/issues/new>.
+I will be notified, and then you'll automatically be notified of progress on
+your bug as I make changes.
 
 
 =head1 SUPPORT
@@ -399,36 +400,28 @@ You can also look for information at:
 
 =over
 
-=item *
+=item * GitHub's request tracker
 
-RT: CPAN's request tracker
+L<https://github.com/guillaumeaubert/Lingua-TH-Numbers/issues>
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=lingua-th-numbers>
-
-=item *
-
-AnnoCPAN: Annotated CPAN documentation
+=item * AnnoCPAN: Annotated CPAN documentation
 
 L<http://annocpan.org/dist/lingua-th-numbers>
 
-=item *
-
-CPAN Ratings
+=item * CPAN Ratings
 
 L<http://cpanratings.perl.org/d/lingua-th-numbers>
 
-=item *
+=item * MetaCPAN
 
-Search CPAN
-
-L<http://search.cpan.org/dist/lingua-th-numbers/>
+L<https://metacpan.org/release/Lingua-TH-Numbers>
 
 =back
 
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2011-2012 Guillaume Aubert.
+Copyright 2011-2013 Guillaume Aubert.
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU General Public License version 3 as published by the Free
