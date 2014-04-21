@@ -2,6 +2,7 @@ Lingua-TH-Numbers
 =================
 
 [![Build Status](https://travis-ci.org/guillaumeaubert/Lingua-TH-Numbers.png?branch=master)](https://travis-ci.org/guillaumeaubert/Lingua-TH-Numbers)
+[![Coverage Status](https://coveralls.io/repos/guillaumeaubert/Lingua-TH-Numbers/badge.png?branch=master)](https://coveralls.io/r/guillaumeaubert/Lingua-TH-Numbers?branch=master)
 
 Lingua-TH-Numbers offers an object oriented package to convert between Thai and
 Arabic numerals, as well as spell numbers in Thai.
@@ -45,7 +46,7 @@ You can also look for information at:
 LICENSE AND COPYRIGHT
 ---------------------
 
-Copyright (C) 2011-2013 Guillaume Aubert
+Copyright (C) 2011-2014 Guillaume Aubert
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU General Public License version 3 as published by the Free
